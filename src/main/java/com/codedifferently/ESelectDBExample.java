@@ -4,7 +4,7 @@ import java.sql.*;
 public class ESelectDBExample {
     static final String DB_URL = "jdbc:mysql://localhost:3306/ROSTER";
     static final String USER = "root";
-    static final String PASS = "tdd-cd";
+    static final String PASS = "clean-code";
     static final String QUERY = "SELECT id, first, last, age FROM STUDENTS";
 
     public static void main(String[] args) {
@@ -15,10 +15,12 @@ public class ESelectDBExample {
         ) {
             while(rs.next()){
                 //Display values
-                System.out.print("ID: " + rs.getInt("id"));
-                System.out.print(", Age: " + rs.getInt("age"));
-                System.out.print(", First: " + rs.getString("first"));
-                System.out.println(", Last: " + rs.getString("last"));
+                Student student = new Student();
+                student.setId(rs.getInt("id"));
+                student.setAge(rs.getInt("age"));
+                student.setFirst( rs.getString("first"));
+                student.setLast(rs.getString("last"));
+                System.out.println(student);
             }
         } catch (SQLException e) {
             e.printStackTrace();

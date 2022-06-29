@@ -8,7 +8,7 @@ import java.sql.Statement;
 public class CCreateDBTable {
     static final String DB_URL = "jdbc:mysql://localhost:3306/ROSTER";
     static final String USER = "root";
-    static final String PASS = "tdd-cd";
+    static final String PASS = "clean-code";
 
     public static void main(String[] args) {
         // Open a connection

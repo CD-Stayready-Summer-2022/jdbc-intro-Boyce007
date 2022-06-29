@@ -7,7 +7,7 @@ import java.sql.SQLException;
 public class BSelectDBExample {
     static final String DB_URL = "jdbc:mysql://localhost:3306/ROSTER";
     static final String USER = "root";
-    static final String PASS = "tdd-cd";
+    static final String PASS = "clean-code";
 
     public static void main(String[] args) {
         System.out.println("Connecting to a selected database...");
